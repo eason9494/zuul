@@ -2,7 +2,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://119.23.57.42:1010/eureka/   #\u6CE8\u518C\u4E2D\u5FC3\u5730\u5740
+      defaultZone: http://localhost:1010/eureka/   #\u6CE8\u518C\u4E2D\u5FC3\u5730\u5740
 server:
   port: 4040    #\u5F53\u524Dzuul\u670D\u52A1\u7AEF\u53E3
 spring:
