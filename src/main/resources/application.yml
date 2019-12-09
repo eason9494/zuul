@@ -1,0 +1,28 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://119.23.57.42:1010/eureka/   #\u6CE8\u518C\u4E2D\u5FC3\u5730\u5740
+server:
+  port: 4040    #\u5F53\u524Dzuul\u670D\u52A1\u7AEF\u53E3
+spring:
+  application:
+    name: zuul #\u670D\u52A1\u540D
+zuul:
+  max:
+    host:
+      connetions: 300
+      socket-timeout-millis: 600
+      connet-timeout-millis: 500
+  routes:  #\u914D\u7F6E\u8DEF\u7531
+    api-user:
+      path: /user/**
+      serviceId: user   #api-a \u5F00\u5934\u7684\u8BF7\u6C42\u8DF3\u8F6C\u5230  consumer1\u670D\u52A1
+    api-comsumer:
+      path: /comsumer/**
+      serviceId: comsumer
+ribbon:
+  ReadTimeout: 1000
+  ConnetTimeout: 1000
+  MaxAutoRetries: 5
+  MaxAutoRetriesNextServer: 2
